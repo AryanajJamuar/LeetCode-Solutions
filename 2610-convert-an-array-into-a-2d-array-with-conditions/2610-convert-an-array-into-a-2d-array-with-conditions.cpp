@@ -1,8 +1,8 @@
 class Solution {
 public:
     vector<vector<int>> findMatrix(vector<int>& nums) 
-    { map <int,int> x ;
-        map <int,int> mp ;
+    { unordered_map <int,int> x ;
+        unordered_map <int,int> mp ;
      int maxi = 0;
      
       for(int i=0;i<nums.size();i++)
