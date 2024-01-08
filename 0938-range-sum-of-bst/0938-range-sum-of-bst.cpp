@@ -17,10 +17,20 @@ public:
         if(root == NULL)
             return ; 
         if(root->val >=low and root->val<=high)
-            ctr+=root->val ;
+        { ctr+=root->val ;
+        
         if(root->left!=NULL)
             t(root->left,low,high) ;
         if(root->right!=NULL)
+            t(root->right,low,high) ;
+        }
+        else if(root->val>high)
+        { if(root->left!=NULL)
+            t(root->left,low,high) ;
+            
+        }
+        else if(root->val<low)
+            if(root->right!=NULL)
             t(root->right,low,high) ;
     }
     int rangeSumBST(TreeNode* root, int low, int high) 
